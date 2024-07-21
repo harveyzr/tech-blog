@@ -1,0 +1,41 @@
+<article>
+  <!-- Link to navigate back to the dashboard -->
+  <a href="/dashboard" class="is-pulled-right"> &larr; Return to Dashboard</a>
+  
+  <!-- Title for the edit post section -->
+  <h2 class="title mt-5">Modify Your Post</h2>
+  <hr>
+
+  <!-- Form for editing the post -->
+  <form class="edit-post-form">
+    <div>
+      <label for="post-title">Post Title:</label>
+      <input class="input" name="post-title" type="text" value="{{post.title}}" required />
+    </div>
+    
+    <div>
+      <label for="post-content">Post Content:</label>
+      <textarea class="textarea" name="post-content" required>{{post.post_content}}</textarea>
+    </div>
+    
+    <!-- Information about the post creator and comments -->
+    <div class="is-pulled-right">
+      Created by you on {{format_date post.created_at}} |
+      <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+    </div>
+    
+    <!-- Buttons for saving or deleting the post -->
+    <div class="buttons">
+      <button type="submit" class="button is-success">Save Changes</button>
+      <button type="button" class="button is-danger delete-post-btn">Remove Post</button>
+    </div>
+  </form>
+</article>
+
+<!-- Include comments section for the post -->
+{{> comments post.comments}}
+
+<!-- JavaScript files for handling post editing and deletion -->
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>

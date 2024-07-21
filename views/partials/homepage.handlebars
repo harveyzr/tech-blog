@@ -1,0 +1,9 @@
+{{#if posts.length}}
+  {{#each posts as |post|}}
+    <!-- Render the post information using the post-info template -->
+    {{> post-info post }}
+  {{/each}}
+{{else}}
+  <!-- Message displayed when there are no posts available -->
+  <h6 class="pb-4 has-text-centered is-italic">there are currently no posts</h6>
+{{/if}}

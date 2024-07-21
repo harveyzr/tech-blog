@@ -1,0 +1,27 @@
+<!-- Main container for the dashboard section -->
+<div class="dashboard-container mb-5 pt-3">
+    <!-- Button to create a new post, positioned to the right -->
+    <a href="/dashboard/create/">
+        <button id="create-new-post" class="button is-primary is-pulled-right">Create New Post</button>
+    </a>
+
+    <!-- Title for the dashboard section -->
+    <h2 class="title pb-4">Your Blog Posts</h2>
+    <hr>
+
+    <!-- Check if there are any posts available -->
+    {{#if posts.length}}
+        <!-- Loop through each post and display it -->
+        {{#each posts as |post|}}
+            {{> post-info post}} <!-- Include the post information component -->
+            
+            <!-- Button to edit the specific post -->
+            <a href="/dashboard/edit/{{post.id}}">
+                <button class="button mb-5 ml-5 is-warning">Edit Post</button>
+            </a>
+        {{/each}}
+    {{else}}
+        <!-- Message displayed when there are no posts -->
+        <h6 class="pb-4 has-text-centered is-italic">You currently have no posts.</h6>
+    {{/if}}
+</div>
