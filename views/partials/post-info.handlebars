@@ -1,0 +1,36 @@
+<!-- Card component for displaying a post -->
+<div class="card mb-6">
+  <!-- Header section of the card -->
+  <header class="card-header has-background-grey-lighter">
+    <div class="column">
+      <!-- Post title linking to the post page -->
+      <p class="has-text-primary-light">
+        <a href="/post/{{id}}" class="has-text-black is-capitalized is-pulled-left">{{title}}</a>
+      </p>
+    </div>
+    <div class="column">
+      <!-- Placeholder for additional header content -->
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Main content area of the card -->
+  <div class="card-content">
+    <div class="content has-text-justified">
+      <!-- Displaying the main content of the post -->
+      {{post_content}}
+    </div>
+    <div class="is-pulled-right">
+      <!-- Author information and social media links -->
+      <strong>{{user.username}}</strong> | 
+      <a href="https://twitter.com/{{user.twitter}}" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a> 
+      <a href="https://github.com/{{user.github}}" target="_blank">
+        <i class="fab fa-github"></i>
+      </a> 
+      | {{format_date created_at}} | 
+      <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    </div>
+  </div>
+</div>

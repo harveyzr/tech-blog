@@ -1,25 +1,20 @@
-// Importing the necessary modules
+// Import the express router
 const express = require('express');
 const router = express.Router();
 
-// Importing route modules
-const apiRoutes = require('./api');
-const homeRoutes = require('./home-routes.js');
-const dashboardRoutes = require('./dashboard-routes.js');
+// Import route modules for users, posts, and comments
+const userRoutes = require('./user-routes');
+const postRoutes = require('./post-routes');
+const commentRoutes = require('./comment-routes');
 
-// Mounting the API routes under the '/api' path
-router.use('/api', apiRoutes);
+// Mount the user routes at the '/users' path
+router.use('/users', userRoutes);
 
-// Mounting the home routes at the root path
-router.use('/', homeRoutes);
+// Mount the post routes at the '/posts' path
+router.use('/posts', postRoutes);
 
-// Mounting the dashboard routes under the '/dashboard' path
-router.use('/dashboard', dashboardRoutes);
+// Mount the comment routes at the '/comments' path
+router.use('/comments', commentRoutes);
 
-// Handling 404 errors for any unmatched routes
-router.use((req, res) => {
-  res.status(404).send('404 Not Found'); // Sending a 404 response
-});
-
-// Exporting the router to be used in other parts of the application
+// Export the configured router for use in the main application
 module.exports = router;

@@ -1,0 +1,179 @@
+/* Universal box-sizing for consistent element sizing */
+*,
+*:before,
+*:after {
+    box-sizing: border-box; /* Includes padding and border in element's total width and height */
+}
+
+/* Basic styling for body and html */
+html, body {
+    height: 100%; /* Full height for body and html */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: sans-serif; /* Set a clean sans-serif font */
+    color: #333; /* Dark gray text color */
+}
+
+/* Link styling */
+a {
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Bold text for links */
+    color: black; /* Default link color */
+}
+
+a:hover {
+    color: #3486eb; /* Change color on hover */
+}
+
+/* Button styling */
+button {
+    border: none; /* Remove default border */
+    padding: 1%; /* Add padding */
+    font-weight: bold; /* Bold text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.1s; /* Smooth background color transition */
+}
+
+/* Form and input styling */
+textarea, input {
+    padding: 0.5%; /* Padding for inputs */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light gray border */
+}
+
+textarea:focus, input:focus {
+    outline: none; /* Remove outline */
+    border: 1px solid #3486eb; /* Highlight border on focus */
+}
+
+/* Textarea specific styles */
+textarea {
+    min-width: 40%; /* Minimum width */
+    min-height: 100px; /* Minimum height */
+}
+
+/* Form layout */
+form > div {
+    margin-bottom: 2%; /* Space between form elements */
+}
+
+form label {
+    display: block; /* Labels on new lines */
+}
+
+/* Main wrapper for layout */
+.wrapper {
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Center the wrapper */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Column direction */
+}
+
+/* Header styling */
+header {
+    border-bottom: 1px solid #ccc; /* Bottom border */
+    display: flex; /* Flexbox for header */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    padding: 0 1%; /* Horizontal padding */
+}
+
+/* Main content area */
+main {
+    flex: 1; /* Take up remaining space */
+    padding: 2% 4%; /* Padding for main content */
+}
+
+/* Button with no style */
+.btn-no-style {
+    background: none; /* No background */
+    border: none; /* No border */
+    padding: 0; /* No padding */
+    cursor: pointer; /* Pointer cursor */
+    text-decoration: none; /* No underline */
+    color: #225ca3; /* Default text color */
+    font-size: 100%; /* Normal font size */
+    font-weight: bold; /* Bold text */
+    transition: color 0.1s; /* Smooth color transition */
+    margin-left: 16px; /* Left margin */
+}
+
+.btn-no-style:hover {
+    color: #3486eb; /* Change color on hover */
+}
+
+/* Delete button styling */
+.delete-post-btn {
+    background-color: #d41414; /* Red background */
+}
+
+.delete-post-btn:hover {
+    background-color: #ff643d; /* Lighter red on hover */
+}
+
+/* Post styling */
+.post {
+    margin-bottom: 2%; /* Space below each post */
+    line-height: 150%; /* Line height for readability */
+}
+
+.post .title span {
+    font-style: italic; /* Italicize title span */
+    font-size: 90%; /* Slightly smaller font size */
+    color: #7d7d7d; /* Light gray color */
+}
+
+/* Edit link styling */
+.edit-link {
+    display: block; /* Block display for edit link */
+    margin: -1.5% 0 2% 0; /* Margin adjustments */
+}
+
+/* Comment form styling */
+.comment-form {
+    margin-bottom: 5%; /* Space below comment form */
+}
+
+/* Comment styling */
+.comment {
+    padding: 1%; /* Padding for comments */
+    margin-bottom: 1%; /* Space below each comment */
+}
+
+.comment:nth-child(odd) {
+    background-color: #fff5eb; /* Light background for odd comments */
+}
+
+/* Meta information for comments */
+.comment .meta {
+    font-size: 90%; /* Smaller font size for meta */
+    margin-bottom: 0.5%; /* Space below meta */
+    opacity: 0.6; /* Slightly transparent */
+}
+
+/* Edit post form styling */
+.edit-post-form {
+    margin-bottom: 5%; /* Space below edit form */
+}
+
+/* Footer styling */
+footer {
+    border-top: 1px solid #ccc; /* Top border */
+    display: flex; /* Flexbox for footer */
+    justify-content: center; /* Center content */
+    padding: 1%; /* Padding for footer */
+    font-size: 110%; /* Slightly larger font size */
+}
+
+/* Card styling */
+.card {
+    margin: 1em 0; /* Space above and below cards */
+}
+
+/* Flexbox for rows */
+.rows {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Column direction */
+}

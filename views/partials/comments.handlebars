@@ -1,0 +1,13 @@
+<div class="comments">
+  {{#each this}} <!-- Iterate over each comment in the context -->
+  <article class="comment"> <!-- Use <article> for better semantic structure -->
+    <header class="meta"> <!-- Header for metadata about the comment -->
+      <span class="username">{{user.username}}</span> <!-- Display the username -->
+      <span class="date">on {{format_date created_at}}</span> <!-- Format and display the date -->
+    </header>
+    <div class="text"> <!-- Container for the comment text -->
+      {{comment_text}} <!-- Display the actual comment text -->
+    </div>
+  </article>
+  {{/each}} <!-- End of the comments iteration -->
+</div>
