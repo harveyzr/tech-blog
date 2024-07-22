@@ -1,0 +1,26 @@
+<!-- Render the article information -->
+{{> post-info post}}
+
+<!-- Check if the user is logged in to display the comment form -->
+{{#if loggedIn}}
+  <!-- Comment submission form -->
+  <form class="comment-form">
+    <div class="textarea-container">
+      <!-- Textarea for user to input their comment -->
+      <textarea class="ml-5" name="comment-body" placeholder="Write your comment here..." required></textarea>
+    </div>
+
+    <div class="button-container">
+      <!-- Button to submit the comment -->
+      <button class="button is-warning ml-5 mb-5" type="submit">Add Comment</button>
+    </div>
+  </form>
+{{/if}}
+
+<!-- Display existing comments for the post -->
+{{> comments post.comments}}
+
+<!-- Include JavaScript for handling comments if logged in -->
+{{#if loggedIn}}
+  <script src="/javascript/comment.js"></script>
+{{/if}}

@@ -1,0 +1,33 @@
+<div class="login-container column">
+  <!-- Title for the login section -->
+  <h2 class="title pb-4">User Authentication</h2>
+  <hr>
+
+  <!-- Form for user login -->
+  <form class="login-form" action="/login" method="POST">
+    <div class="input-group">
+      <!-- Input field for email -->
+      <label for="email-input">Email Address:</label>
+      <input type="email" id="email-input" placeholder="Enter your email" required />
+    </div>
+
+    <div class="input-group">
+      <!-- Input field for password -->
+      <label for="password-input">Password:</label>
+      <input type="password" id="password-input" placeholder="Enter your password" required />
+    </div>
+
+    <div class="button-group">
+      <!-- Button to submit the login form -->
+      <button type="submit" class="button is-primary">Log In</button>
+      
+      <!-- Link to the signup page -->
+      <a href="/signup">
+        <button type="button" class="button is-danger">Create Account</button>
+      </a>
+    </div>
+  </form>
+</div>
+
+<!-- JavaScript file for handling login functionality -->
+<script src="/javascript/login.js"></script>
